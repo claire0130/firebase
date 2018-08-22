@@ -9,11 +9,16 @@
           storageBucket: "memowebapp-2db2a.appspot.com",
           messagingSenderId: "983708128773"
         };
+		// firebase가 초기화
         firebase.initializeApp(config);
+
+		// firebase.auth() :  firebase의 인증 객체
         auth = firebase.auth();
         database = firebase.database();
+
+		// google provider사용
         var authProvider = new firebase.auth.GoogleAuthProvider();
-        
+
         auth.onAuthStateChanged(function(user) {
           if ( user ) {
             // 인증 성공
@@ -35,7 +40,7 @@
           memoRef.on('child_changed', on_child_changed);
         }
 
-        // 데이터 수정 함수 
+        // 데이터 수정 함수
         function on_child_changed(data) {
           var key   = data.key;
           var txt   = data.val().txt;
@@ -52,7 +57,7 @@
               txt : '메모에 본문',
               updateDate : '업데이트 날짜',
               createData : '생성한 날짜'
-            }       
+            }
           */
 
           var key      = data.key;
@@ -121,7 +126,7 @@
         // 신규 메모 함수
         function initMemo() {
           $(".textarea").val('');
-          // 초기화 
+          // 초기화
           selectedKey = null;
         }
 

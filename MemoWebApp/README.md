@@ -2,7 +2,7 @@
 
 # 메모 웹 애플리케이션 만들기
 
-[https://memowebapp-2db2a.firebaseapp.com/] (https://memowebapp-2db2a.firebaseapp.com/)
+[https://memowebapp-2db2a.firebaseapp.com/](https://memowebapp-2db2a.firebaseapp.com/)
 
 ## To Do
 1. 인증기능을 이용한 구글창 호출
@@ -59,5 +59,5 @@ auth.onAuthStateChanged(function(user) {
 	txt : '메모에 본문',
 	updateDate : '업데이트 날짜',
 	createData : '생성한 날짜'
-} 
+}
 ```
